@@ -1,0 +1,14 @@
+apiVersion: v1
+Kind: Service
+metadata:
+  name: redis-service
+  labels:
+    app: voting-app
+    name: redis-service
+spec:
+  ports:
+  - port: 6379
+    targetport: 6379
+  selector:
+    app: redis-app
+    name: redis-pod
