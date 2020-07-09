@@ -5,10 +5,10 @@ metadata:
   labels:
     name: postgresdb-service
     type: postgres-service
-specs:
+spec:
   ports:
   - port: 5432
-    targetport: 5432
+    targetPort: 5432
   selector:
     app: postgres-app
     name: postgres-pod
